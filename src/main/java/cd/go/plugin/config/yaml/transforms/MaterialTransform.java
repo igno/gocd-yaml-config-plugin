@@ -185,6 +185,7 @@ public class MaterialTransform extends ConfigurationTransform {
             material.addProperty(JSON_MATERIAL_TYPE_FIELD, "plugin");
             addOptionalString(material, materialMap, "scm_id", YAML_SHORT_KEYWORD_SCM_ID);
             addOptionalObject(material, materialMap, JSON_MATERIAL_SCM_PLUGIN_CONFIG_FIELD, YAML_MATERIAL_SCM_PLUGIN_CONFIG_FIELD);
+            addOptionalBoolean(material, materialMap, JSON_MATERIAL_AUTO_UPDATE_FIELD, YAML_MATERIAL_AUTO_UPDATE_FIELD);
             super.addConfiguration(material,  materialMap);
         }
         String package_id = getOptionalString(materialMap, YAML_SHORT_KEYWORD_PACKAGE_ID);
